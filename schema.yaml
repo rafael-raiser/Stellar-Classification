@@ -1,1 +1,22 @@
-key: value
+COLUMNS:
+  alpha: float64
+  delta: float64
+  u: float64
+  g: float64
+  r: float64
+  i: float64
+  z: float64
+  run_ID: int64
+  rerun_ID: int64
+  cam_col: int64
+  field_ID: int64
+  spec_obj_ID: float64
+  class: object
+  redshift: float64
+  plate: int64
+  MJD: int64
+  fiber_ID: int64
+
+
+TARGET_COLUMN:
+  name: class
