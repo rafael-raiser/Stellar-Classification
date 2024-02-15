@@ -63,14 +63,15 @@ def save_json(path: Path, data: dict):
 
 
 @ensure_annotations
-def save_pickle(path: Path, data: dict):
+def save_pickle(path: Path, data):
     """Save binary pickle data
 
     Args:
         path (Path): path to pickle file
+        data (Any): data to be saved
     """
     with open(path, 'wb') as f:
-        pickle.dumb(data, f)
+        pickle.dump(data, f)
     logger.info(f'pickle file save at: {path}')
 
 @ensure_annotations
@@ -90,7 +91,7 @@ def load_json(path: Path) -> ConfigBox:
     return ConfigBox(content)
 
 @ensure_annotations
-def load_pickle(path: Path) -> Any:
+def load_pickle(path: Path):
     """load pickle files data
 
     Args:
@@ -107,7 +108,7 @@ def load_pickle(path: Path) -> Any:
 
 
 @ensure_annotations
-def save_bin(data: Any, path: Path):
+def save_bin(data, path: Path):
     """save binary file
 
     Args:

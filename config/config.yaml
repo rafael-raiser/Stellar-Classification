@@ -10,4 +10,9 @@ data_validation:
   local_data_file: artifacts/data_ingestion/data.csv
   STATUS_FILE: artifacts/data_validation/status.txt
 
+data_transformation:
+  root_dir: artifacts/data_transformation
+  data_path: artifacts/data_ingestion/data.csv
+  target_encoding_path: artifacts/data_transformation/target_encoding.pickle
+
 
